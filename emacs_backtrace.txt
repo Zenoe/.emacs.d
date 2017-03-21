@@ -1,3 +1,0 @@
-
-Backtrace:
-0x56e7d5
