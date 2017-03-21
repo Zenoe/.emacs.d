@@ -1,0 +1,9 @@
+# -*- coding: utf-8; mode: snippet -*-
+# name: profilend
+# key: pre
+# contributor: Chen Bin <chenbin.sh AT gmail>
+# --
+#ifdef ZENOE_PROFILE
+t2 = get_time();
+LOG_DEBUG("${1:`(which-function)`}: %f", t2-t1);
+#endif
