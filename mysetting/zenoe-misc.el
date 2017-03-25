@@ -9,6 +9,7 @@
 (load-file ( concat myset-folder "evil-keybinding.el" ))
 (load-file ( concat myset-folder "cygwin.el" ))
 (load-file ( concat myset-folder "switchbuf.el"))
+(load-file ( concat myset-folder "misc.el"))
 ;; (load-file ( concat myset-folder "vs2010.el"))
 ;; (autoload 'my-php-debug "myphp" "php debug" t nil)
 
@@ -81,7 +82,6 @@
 
 ;;(require 'org-ac)
 ;; (put 'upcase-region 'disabled nil)
-;;±Ì∏Ò÷–”¢Œƒ±Ì∏Ò
 ;; (setq org-startup-indented t)
 ;; the following cause err: Symbol's value as variable is void: org-directory
 ;; (setq org-default-notes-file (concat org-directory "/notes.org"));; Org Capture
@@ -90,9 +90,7 @@
 ;;          "* TODO %?\n %i\n")
 ;;         ("l" "Link" plain (file (concat org-directory "/links.org"))
 ;;          "- %?\n %x\n")))
-;;org end
-
-;; (global-set-key (kbd "C-c C-o") 'imenu)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; ffip find in project
 (eval-after-load 'find-file-in-project
@@ -147,15 +145,15 @@ Version 2016-10-15"
 ;; dired
 
 ;;(setq dired-dwim-target t) already t
-;; Now, go to dired, then call split-window-below, then go to another dired dir. Now, when you press C to copy, the other dir in the split pane will be default destination. Same for dired-do-rename °æR°ø and others.
+;; Now, go to dired, then call split-window-below, then go to another dired dir. Now, when you press C to copy, the other dir in the split pane will be default destination. Same for dired-do-rename „ÄêR„Äë and others.
 
 (eval-after-load 'dired
   '(progn
      ;; without requiring 'dired ==> Symbol's value as variable is void: dired-mode-map
      (define-key dired-mode-map (kbd "C-,") 'xah-open-in-external-app)
      ;; (define-key dired-mode-map (kbd "j") 'ido-find-file)
-     (setq dired-recursive-copies (quote always)) ; °∞always°± means no asking
-     (setq dired-recursive-deletes (quote top)) ; °∞top°± means ask once
+     (setq dired-recursive-copies (quote always)) ; ‚Äúalways‚Äù means no asking
+     (setq dired-recursive-deletes (quote top)) ; ‚Äútop‚Äù means ask once
      (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file "..")))  ; was dired-up-directory
 )
 )
