@@ -8,6 +8,8 @@
 (global-set-key (kbd "<f7>") 'xah-previous-user-buffer)
 (global-set-key (kbd "<S-f7>") 'xah-next-user-buffer)
 
+(toggle-frame-maximized)
+
 ;; (defun helm-dired-buffer()
 ;;   (interactive)
 ;;   (let ((blist (buffer-list))(rlist))

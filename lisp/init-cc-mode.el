@@ -98,7 +98,7 @@
 ;;                        (file-name-directory buffer-file-name))))
 ;;     (list "clang++" (list "-Wall" "-Wextra" "-fsyntax-only" local-file))))
 
-(push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
+;; (push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
 ;; (eval-after-load 'c++-mode
 ;;   '(progn  (flymake-cc-init) (c-mode-common-hook-setup)))
 
@@ -118,5 +118,4 @@
 (add-hook 'c-mode-common-hook 'c-mode-common-hook-setup)
 
 ;; (add-hook 'c++-mode-hook 'flymake-mode)
-;; (add-hook 'c-mode-common-hook 'c-mode-common-hook-setup)
 (provide 'init-cc-mode)

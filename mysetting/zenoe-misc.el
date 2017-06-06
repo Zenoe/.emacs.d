@@ -2,7 +2,7 @@
 ;; (setq url-proxy-services '(("https" . "127.0.0.1:1080")))
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-(global-set-key (kbd "C-q") 'quoted-insert)
+;; (global-set-key (kbd "C-q") 'quoted-insert)
 (prefer-coding-system 'utf-8)
 (setq bidi-display-reordering nil)
 (defvar myset-folder "~/.emacs.d/mysetting/")
@@ -21,6 +21,7 @@
   (add-to-list 'exec-path "c:/Program Files/LLVM/bin")
   (add-to-list 'exec-path "c:/Python27")
   (add-to-list 'exec-path "d:/portable/TOOL")
+
   ;; (add-to-list 'exec-path "D:/portable/.babun/cygwin/bin")
   (setenv "PATH"
   (concat
@@ -46,7 +47,6 @@
 
 (setq kill-buffer-query-functions (delq 'process-kill-buffer-query-function kill-buffer-query-functions))
 
-(toggle-frame-maximized)
 ;; (message-box "%s" (getenv "LIBPATH") t t)
 ;;python
 
@@ -230,19 +230,8 @@ searches all buffers."
          )
     (ggtags-find-tag 'definition (shell-quote-argument keyword))))
 
-(eval-after-load 'evil-commands
-  '(progn
-    (evil-define-motion evil-goto-curdef ()
-      :jump t  ;; may means to push a marker before jumping, so that it's possible to back to last position
-      :type exclusive
-      (interactive)
-      (if (bounds-of-thing-at-point 'defun)
-          (save-restriction
-        (narrow-to-defun)
-        (evil-goto-definition))
-    (evil-goto-definition)))
-(define-key evil-motion-state-map "gh" 'evil-goto-curdef)
-))
-
+(nvmap :prefix ","
+       "gd" 'ggtags-find-def
+       )
 (provide 'zenoe-misc)
 

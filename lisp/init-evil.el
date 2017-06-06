@@ -348,6 +348,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
 (define-key evil-insert-state-map (kbd "C-e") 'move-end-of-line)
 (define-key evil-insert-state-map (kbd "C-a") 'move-beginning-of-line)
 (define-key evil-insert-state-map (kbd "C-k") 'kill-line)
+(define-key evil-insert-state-map (kbd "C-y") 'yank)
 (define-key evil-insert-state-map (kbd "M-j") 'yas-expand)
 (define-key evil-emacs-state-map (kbd "M-j") 'yas-expand)
 (global-set-key (kbd "C-r") 'undo-tree-redo)
@@ -372,12 +373,12 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "sd" 'sudo-edit
        "sc" 'shell-command
        "ee" 'eval-expression
-       ;; "aa" 'copy-to-x-clipboard ; used frequently
+       "aa" 'copy-to-x-clipboard ; used frequently
        "aw" 'ace-swap-window
        "af" 'ace-maximize-window
-       "ac" 'aya-create
-       "ae" 'aya-expand
-       ;; "zz" 'paste-from-x-clipboard ; used frequently
+       ;; "ac" 'aya-create
+       ;; "ae" 'aya-expand
+       "zz" 'paste-from-x-clipboard ; used frequently
        "cy" 'strip-convert-lines-into-one-big-string
        "bs" '(lambda () (interactive) (goto-edge-by-comparing-font-face -1))
        "es" 'goto-edge-by-comparing-font-face
@@ -439,7 +440,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "lq" 'highlight-symbol-query-replace
        "ln" 'highlight-symbol-nav-mode ; use M-n/M-p to navigation between symbols
        "bm" 'pomodoro-start ;; beat myself
-       "ii" 'counsel-imenu-goto
+       "SPC" 'counsel-imenu-goto
        ;; "im" 'ido-imenu
        "ij" 'rimenu-jump
        ;; "." 'evil-ex ;; @see https://github.com/pidu/git-timemachine
@@ -461,7 +462,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "cxr" 'org-clock-report ; `C-c C-x C-r'
        "qq" 'my-grep
        "xc" 'save-buffers-kill-terminal
-       "rr" 'counsel-recentf-goto
+       ;; "rr" 'counsel-recentf-goto
        "rh" 'counsel-yank-bash-history ; bash history command => yank-ring
        "rf" 'counsel-goto-recent-directory
        "da" 'diff-region-tag-selected-as-a
@@ -532,7 +533,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        ;; "8" 'select-window-8
        ;; "9" 'select-window-9
        "xm" 'my-M-x
-       "xx" 'er/expand-region
+       ;; "xx" 'er/expand-region
        "xf" 'counsel-find-file
        ;; "xb" 'ido-switch-buffer
        "xh" 'mark-whole-buffer
@@ -564,6 +565,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "wf" 'popup-which-function
        ;; zenoe
 
+       "rn" 'rename-this-file-and-buffer
        "." 'repeat
        "cs" 'cancel-selection)
 ;; }}
@@ -602,7 +604,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "ms" 'mc/skip-to-next-like-this
        "me" 'mc/edit-lines
        ;; zenoe adds
-       "bs" 'switch-to-scratch-buffer
+       "b" 'switch-to-scratch-buffer
        ;; "w" 'avy-goto-word-1
        "i" 'ace-jump-line-mode
        "c" 'avy-goto-char-timer
@@ -610,6 +612,9 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "1" 'delete-other-windows
        "2" 'split-window-vertically
        "3" 'split-window-horizontally
+       "sc" 'evil-surround-change
+       "sd" 'evil-surround-delete
+       "SPC" 'counsel-recentf-goto
 )
 ;; per-major-mode leader setup
 (general-define-key :states '(normal motion insert emacs)
