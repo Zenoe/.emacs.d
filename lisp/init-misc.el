@@ -19,7 +19,7 @@
 ;; - `aya-create' at first, input ~ to mark the thing next
 ;; - `aya-expand' to expand snippet
 ;; - `aya-open-line' to finish
-(global-set-key (kbd "C-q") #'aya-open-line)
+;; (global-set-key (kbd "C-q") #'aya-open-line)
 ;; }}
 
 ;; {{ ace-link
@@ -36,7 +36,7 @@
 (add-to-list 'auto-mode-alist '("\\.ninja$" . makefile-gmake-mode))
 
 ;; {{ support MY packages which are not included in melpa
-(setq org2nikola-use-verbose-metadata t) ; for nikola 7.7+
+;; (setq org2nikola-use-verbose-metadata t) ; for nikola 7.7+
 ;; }}
 
 ;; (define-key global-map (kbd "RET") 'newline-and-indent)
