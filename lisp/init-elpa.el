@@ -9,7 +9,7 @@ But you may use safer HTTPS instead.")
 ;; Feel free to add more packages!
 (defvar melpa-include-packages
   '(ace-mc
-    bbdb
+    ;; bbdb
     color-theme
     ivy
     counsel
