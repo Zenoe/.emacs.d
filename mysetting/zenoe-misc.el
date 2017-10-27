@@ -235,4 +235,3 @@ searches all buffers."
        "gd" 'ggtags-find-def
        )
 (provide 'zenoe-misc)
-

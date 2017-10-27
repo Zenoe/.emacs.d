@@ -365,7 +365,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "bf" 'beginning-of-defun
        "bu" 'backward-up-list
        "du" 'up-list
-       "bb" 'ivy-switch-buffer
+       ";" 'ivy-switch-buffer
        "ef" 'end-of-defun
        "mf" 'mark-defun
        "em" 'erase-message-buffer
@@ -568,7 +568,6 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "rn" 'rename-this-file-and-buffer
        "." 'repeat
        "cs" 'cancel-selection)
-;; }}
 
 ;; {{ Use `SPC` as leader key
 ;; all keywords arguments are still supported
@@ -732,6 +731,5 @@ If the character before and after CH is space or tab, CH is NOT slash"
 (evil-exchange-install)
 ;; }}
 
-;; }}
 
 (provide 'init-evil)
