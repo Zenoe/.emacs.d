@@ -10,6 +10,7 @@
 (load-file ( concat myset-folder "cygwin.el" ))
 (load-file ( concat myset-folder "switchbuf.el"))
 (load-file ( concat myset-folder "misc.el"))
+(load-file ( concat myset-folder "lookup.el"))
 (load-file ( concat myset-folder "dired-misc.el"))
 ;; (load-file ( concat myset-folder "vs2010.el"))
 ;; (autoload 'my-php-debug "myphp" "php debug" t nil)
@@ -233,6 +234,8 @@ searches all buffers."
 
 (nvmap :prefix ","
        "gd" 'ggtags-find-def
+       "gw" 'my-lookup-wikipedia
+       "go" 'my-lookup-google
        )
 (provide 'zenoe-misc)
 

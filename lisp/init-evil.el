@@ -380,8 +380,8 @@ If the character before and after CH is space or tab, CH is NOT slash"
        ;; "ae" 'aya-expand
        "zz" 'paste-from-x-clipboard ; used frequently
        "cy" 'strip-convert-lines-into-one-big-string
-       "bs" '(lambda () (interactive) (goto-edge-by-comparing-font-face -1))
-       "es" 'goto-edge-by-comparing-font-face
+       ;; "bs" '(lambda () (interactive) (goto-edge-by-comparing-font-face -1))
+       ;; "es" 'goto-edge-by-comparing-font-face
        "vj" 'my-validate-json-or-js-expression
        "mcr" 'my-create-regex-from-kill-ring
        "ntt" 'neotree-toggle
