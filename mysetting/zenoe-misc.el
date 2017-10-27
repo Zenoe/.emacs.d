@@ -238,4 +238,3 @@ searches all buffers."
        "go" 'my-lookup-google
        )
 (provide 'zenoe-misc)
-
