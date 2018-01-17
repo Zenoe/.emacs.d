@@ -396,6 +396,15 @@ Extended regex is used, like (pattern1|pattern2)."
               :action 'counsel--open-grepped-file)))
 ;; }}
 
+
+(defun current_dir_grep ()
+  (interactive)
+  (let* ((keyword (counsel-read-keyword "Enter grep pattern: "))
+         (collection (split-string (shell-command-to-string (my-grep-cli keyword)) "\n" t)))
+    (ivy-read (format "matching \"%s\" at %s:" keyword "." )
+              collection
+              :action 'counsel--open-grepped-file)))
+
 (defun counsel-browse-kill-ring (&optional n)
   "Use `browse-kill-ring' if it exists and N is 1.
 If N > 1, assume just yank the Nth item in `kill-ring'.

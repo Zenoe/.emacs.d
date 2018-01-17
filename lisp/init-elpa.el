@@ -20,6 +20,7 @@ But you may use safer HTTPS instead.")
     company ; I won't wait another 2 years for stable
     simple-httpd
     dsvn
+    ensime
     move-text
     string-edit ; looks magnars don't update stable tag frequently
     findr
@@ -253,5 +254,6 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'define-word)
 (require-package 'quack) ;; for scheme
 (require-package 'hydra)
+(require-package 'ensime)
 ;(require-package 'vlf)
 (provide 'init-elpa)

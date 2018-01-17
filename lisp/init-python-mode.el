@@ -1,7 +1,7 @@
 (setq interpreter-mode-alist
       (cons '("python" . python-mode) interpreter-mode-alist))
 
-;; without which would cause warning: Your ‘python-shell-interpreter’ doesn’t seem to support readline
+; without which would cause warning: Your ‘python-shell-interpreter’ doesn’t seem to support readline
 (setq python-shell-completion-native-enable nil)
 
 ;; run command `pip install jedi flake8 importmagic` in shell,

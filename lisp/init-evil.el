@@ -365,7 +365,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "bf" 'beginning-of-defun
        "bu" 'backward-up-list
        "du" 'up-list
-       ";" 'ivy-switch-buffer
+       "SPC" 'ivy-switch-buffer
        "ef" 'end-of-defun
        "mf" 'mark-defun
        "em" 'erase-message-buffer
@@ -440,7 +440,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "lq" 'highlight-symbol-query-replace
        "ln" 'highlight-symbol-nav-mode ; use M-n/M-p to navigation between symbols
        "bm" 'pomodoro-start ;; beat myself
-       "SPC" 'counsel-imenu-goto
+       ";" 'counsel-imenu-goto
        ;; "im" 'ido-imenu
        "ij" 'rimenu-jump
        ;; "." 'evil-ex ;; @see https://github.com/pidu/git-timemachine
@@ -461,6 +461,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
        "cxo" 'org-clock-out ; `C-c C-x C-o'
        "cxr" 'org-clock-report ; `C-c C-x C-r'
        "qq" 'my-grep
+       "qw" 'current_dir_grep
        "xc" 'save-buffers-kill-terminal
        ;; "rr" 'counsel-recentf-goto
        "rh" 'counsel-yank-bash-history ; bash history command => yank-ring

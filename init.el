@@ -129,6 +129,7 @@
   ;; zenoe
   (require 'goto-last-change)
   (require 'zenoe-misc)
+  (require 'init-scala-mode)
   ;; zenoe end
   ;; comment below line if you want to setup color theme in your own way
   (if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))

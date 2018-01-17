@@ -1,6 +1,7 @@
 ;; font
 (set-frame-font "Inconsolata-12")
 (setq ring-bell-function 'ignore)
+(setq neo-autorefresh nil)
 ;; (cond ((eq system-type 'darwin)  ( (lambda () (
 ;;                                                (set-face-attribute 'default nil :font
 ;;                                                                    (format "%s:pixelsize=%d" (car fonts) 12))

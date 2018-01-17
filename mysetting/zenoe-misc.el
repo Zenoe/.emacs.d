@@ -232,6 +232,7 @@ searches all buffers."
          )
     (ggtags-find-tag 'definition (shell-quote-argument keyword))))
 
+(define-key evil-motion-state-map "U" 'undo-tree-redo)
 (nvmap :prefix ","
        "gd" 'ggtags-find-def
        "gw" 'my-lookup-wikipedia
